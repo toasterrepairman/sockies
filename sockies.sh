@@ -8,7 +8,7 @@ sudo systemctl status sshd.service
 sudo chsh -s /bin/fish
 
 # Download podman dependencies
-sudo yay -S podman cockpit-podman cockpit-machines cockpit-podman
+yay -S podman cockpit-podman cockpit-machines cockpit-podman
 
 # Set up directory structure 
 cd ~/Documents/
