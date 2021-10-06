@@ -1,5 +1,15 @@
-sudo pacman -S openssh yay micro 
+# Install basic tools
+sudo pacman -S openssh yay micro fish 
 
+# Enable remote access
 sudo systemctl status sshd.service
 
+# Download podman dependencies
 sudo yay -S podman cockpit-podman cockpit-machines cockpit-podman
+
+# Set up directory structure 
+cd ~/Documents/
+mkdir Code Books Cloud
+cd Code/ 
+mkdir Rust Shell Python
+cd
