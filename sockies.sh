@@ -4,6 +4,9 @@ sudo pacman -S openssh yay micro fish
 # Enable remote access
 sudo systemctl status sshd.service
 
+# setting fish to default shell
+sudo chsh -s /bin/fish
+
 # Download podman dependencies
 sudo yay -S podman cockpit-podman cockpit-machines cockpit-podman
 
