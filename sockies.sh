@@ -5,6 +5,9 @@ sudo pacman -S openssh yay micro fish ufw
 # Enable SSH
 sudo ufw allow ssh
 
+# Download podman dependencies
+yay -S podman cockpit-podman cockpit-machines cockpit-podman
+
 # Enable services
 sudo systemctl enable sshd.service
 sudo systemctl enable cockpit
@@ -28,9 +31,6 @@ cd
 # [PODMAN SETUP]
 # Login to dockerhub
 podman login -u toasterrepairman
-
-# Download podman dependencies
-yay -S podman cockpit-podman cockpit-machines cockpit-podman
 
 # Install grafana
 podman pull grafana/grafana
