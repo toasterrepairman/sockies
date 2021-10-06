@@ -23,7 +23,8 @@ sudo systemctl start cockpit
 sudo chsh -s /bin/fish
 
 # Installing netdata
-bash <(curl -Ss https://my-netdata.io/kickstart.sh) — dont-wait
+yay -S gcc make autoconf automake pkg-config zlib1g-dev uuid-dev base-devel
+bash <(curl -Ss https://my-netdata.io/kickstart.sh)
 
 # Set up directory structure 
 cd ~/Documents/
