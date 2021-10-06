@@ -9,6 +9,9 @@ sudo ufw allow ssh
 sudo systemctl enable sshd.service
 sudo systemctl enable cockpit
 
+sudo systemctl start sshd.service
+sudo systemctl start cockpit
+
 # Setting fish to default shell
 sudo chsh -s /bin/fish
 
