@@ -5,6 +5,10 @@ sudo pacman -S openssh yay micro fish ufw
 # Enable SSH
 sudo ufw allow ssh
 
+# Download network virtualization dependencies
+sudo pacman -Syu ebtables dnsmasq
+sudo systemctl restart libvirtd
+
 # Enable services
 sudo systemctl enable sshd.service
 sudo systemctl enable cockpit
