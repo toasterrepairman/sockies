@@ -1,6 +1,6 @@
 # [BASIC SETUP]
 # Install basic tools
-sudo pacman -S openssh yay micro fish ufw
+sudo pacman -S openssh yay micro fish ufw qemu
 
 # Enable SSH
 sudo ufw allow ssh
@@ -9,9 +9,15 @@ sudo ufw allow ssh
 sudo pacman -Syu ebtables dnsmasq
 sudo systemctl restart libvirtd
 
+# Download podman dependencies
+yay -S podman cockpit-podman cockpit-machines cockpit-podman
+
 # Enable services
 sudo systemctl enable sshd.service
 sudo systemctl enable cockpit
+
+sudo systemctl start sshd.service
+sudo systemctl start cockpit
 
 # Setting fish to default shell
 sudo chsh -s /bin/fish
@@ -29,9 +35,6 @@ cd
 # [PODMAN SETUP]
 # Login to dockerhub
 podman login -u toasterrepairman
-
-# Download podman dependencies
-yay -S podman cockpit-podman cockpit-machines cockpit-podman
 
 # Install grafana
 podman pull grafana/grafana
