@@ -45,3 +45,7 @@ podman pull prom/prometheus
 
 # Boot containers
 # podman run -d --name=grafana -p 3000:3000 grafana/grafana
+
+# [VIRTUALIZATION SETUP]
+# run virsh at boot
+sudo virsh net-autostart default
